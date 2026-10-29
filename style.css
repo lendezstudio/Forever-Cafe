@@ -65,7 +65,7 @@ footer{background:#1e211e;color:#f6f2e8}.footer-grid p{color:#c7c4ba}.footer-gri
 
 @media(min-width:721px) and (max-width:960px){header{padding-left:7%;padding-right:7%}}
 
-/* Show the complete, centered product inside each menu thumbnail. */
-.menu-thumb{object-fit:contain;object-position:center center;background:#fffdf8;display:block;overflow:hidden;aspect-ratio:1}
-@media(max-width:720px){.menu-thumb{width:64px;height:64px;object-fit:contain;object-position:center}}
+/* Fill each menu thumbnail edge to edge, centered on the product. */
+.menu-thumb{object-fit:cover;object-position:center center;background:#fffdf8;display:block;overflow:hidden;aspect-ratio:1}
+@media(max-width:720px){.menu-thumb{width:64px;height:64px;object-fit:cover;object-position:center}}
 @media(max-width:360px){.menu-thumb{width:52px;height:52px}}

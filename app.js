@@ -65,8 +65,8 @@ function menuThumbnail(name){
   const cell=drinkCells[name];
   const [x,right]=[[0,281],[286,559],[564,839],[844,1122]][cell%4];
   const [y,bottom]=[[0,264],[267,526],[528,791],[793,1056],[1058,1402]][Math.floor(cell/4)];
-  const w=right-x,h=bottom-y;
-  return `<svg class="menu-thumb" role="img" aria-label="${name}" viewBox="${x} ${y} ${w} ${h}" preserveAspectRatio="xMidYMid meet"><image href="assets/menu-drinks.png" width="${atlasSize.width}" height="${atlasSize.height}"/></svg>`;
+  const inset=10,w=right-x-inset*2,h=bottom-y-inset*2;
+  return `<svg class="menu-thumb" role="img" aria-label="${name}" viewBox="${x+inset} ${y+inset} ${w} ${h}" preserveAspectRatio="xMidYMid slice"><image href="assets/menu-drinks.png" width="${atlasSize.width}" height="${atlasSize.height}"/></svg>`;
  }
  const [photo,alt]=menuPhoto(name);
  return `<img class="menu-thumb" src="assets/${photo}.jpg" alt="${alt}" loading="lazy" width="96" height="96">`;
